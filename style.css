@@ -42,9 +42,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    HEADER
-========================================================= */
+========================= */
 
 .site-header {
   position: sticky;
@@ -89,9 +89,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    HERO
-========================================================= */
+========================= */
 
 .hero {
   padding: 135px 0 125px;
@@ -172,9 +172,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    SECTIONS
-========================================================= */
+========================= */
 
 .section {
   padding: 105px 0;
@@ -210,9 +210,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    PROJECT CARDS
-========================================================= */
+========================= */
 
 .project-card {
   position: relative;
@@ -257,9 +257,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    CAMPUSKART HIGHLIGHTS
-========================================================= */
+========================= */
 
 .project-highlights {
   display: grid;
@@ -281,9 +281,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    EVIDENCE FOLDER
-========================================================= */
+========================= */
 
 .project-evidence-link {
   margin-top: 26px;
@@ -344,9 +344,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    TAGS
-========================================================= */
+========================= */
 
 .tags {
   display: flex;
@@ -376,9 +376,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    SKILLS
-========================================================= */
+========================= */
 
 .skills-section {
   background: var(--soft);
@@ -412,9 +412,9 @@ img {
 }
 
 
-/* =========================================================
+/* =========================
    ABOUT
-========================================================= */
+========================= */
 
 .about-section {
   padding-bottom: 115px;
@@ -429,12 +429,24 @@ img {
 }
 
 
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  border-top: 1px solid var(--line);
+  padding: 27px 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+
 /* =========================================================
    CAMPUSKART EVIDENCE PAGE
 ========================================================= */
 
 
-/* ---------- Overview ---------- */
+/* ---------- Project overview ---------- */
 
 .project-intro {
   max-width: 820px;
@@ -527,7 +539,7 @@ img {
 .bpmn-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .bpmn-card {
@@ -543,18 +555,18 @@ img {
 }
 
 .bpmn-card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   border-color: #c8d3df;
-  box-shadow: 0 18px 42px rgba(23, 32, 51, 0.09);
+  box-shadow: 0 15px 35px rgba(23, 32, 51, 0.08);
 }
 
 .bpmn-image {
   width: 100%;
-  height: 310px;
+  height: 220px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px;
+  padding: 10px;
   background: #f8fafc;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
@@ -567,13 +579,13 @@ img {
 }
 
 .bpmn-caption {
-  padding: 19px 21px 21px;
+  padding: 16px 18px 18px;
 }
 
 .bpmn-caption strong {
   display: block;
-  margin-bottom: 4px;
-  font-size: 18px;
+  margin-bottom: 3px;
+  font-size: 17px;
 }
 
 .bpmn-caption span {
@@ -587,7 +599,7 @@ img {
 .evidence-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
+  gap: 18px;
 }
 
 .evidence-card {
@@ -607,13 +619,9 @@ img {
   box-shadow: 0 15px 35px rgba(23, 32, 51, 0.08);
 }
 
-.evidence-card a {
-  display: block;
-}
-
 .evidence-card img {
   width: 100%;
-  height: 330px;
+  height: 220px;
   object-fit: contain;
   background: #f8fafc;
   border-bottom: 1px solid var(--line);
@@ -625,7 +633,7 @@ img {
 }
 
 .evidence-card > div {
-  padding: 16px 18px 18px;
+  padding: 14px 17px 16px;
 }
 
 .evidence-card strong {
@@ -635,16 +643,6 @@ img {
 }
 
 .evidence-card span {
-  color: var(--muted);
-  font-size: 13px;
-}
-
-
-/* ---------- Footer ---------- */
-
-.site-footer {
-  border-top: 1px solid var(--line);
-  padding: 27px 0;
   color: var(--muted);
   font-size: 13px;
 }
@@ -662,7 +660,7 @@ img {
   }
 
   .bpmn-image {
-    height: 360px;
+    height: 260px;
   }
 }
 
@@ -733,17 +731,12 @@ img {
     font-size: 16px;
   }
 
-  .bpmn-section {
-    padding: 75px 0;
-  }
-
   .bpmn-image {
-    height: auto;
-    min-height: 280px;
+    height: 240px;
   }
 
   .evidence-card img {
     height: auto;
-    min-height: 220px;
+    min-height: 200px;
   }
 }
