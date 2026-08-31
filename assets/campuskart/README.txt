@@ -1,0 +1,1 @@
+Place selected BPMN diagrams, Odoo screenshots and other visual assets for the CampusKart case study here.
