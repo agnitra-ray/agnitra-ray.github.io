@@ -1,8 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
 
   <title>CampusKart | ERP Consulting & Odoo Implementation</title>
 
@@ -10,6 +14,7 @@
         content="CampusKart ERP consulting and Odoo implementation case study by Agnitra Ray.">
 
   <style>
+
     :root {
       --ink: #172033;
       --muted: #667085;
@@ -31,8 +36,10 @@
 
     body {
       margin: 0;
-      font-family: Inter, ui-sans-serif, system-ui, -apple-system,
-        BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-family: Inter, ui-sans-serif, system-ui,
+        -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+
       color: var(--ink);
       background: var(--paper);
       line-height: 1.65;
@@ -44,43 +51,65 @@
     }
 
     .container {
-      width: min(var(--max), calc(100% - 48px));
+      width: min(
+        var(--max),
+        calc(100% - 48px)
+      );
+
       margin: 0 auto;
     }
 
-    /* NAVIGATION */
+
+    /* =========================
+       NAVIGATION
+       ========================= */
 
     .site-header {
       position: sticky;
       top: 0;
       z-index: 10;
+
       background: rgba(255,255,255,.96);
+
       border-bottom: 1px solid var(--line);
+
       backdrop-filter: blur(8px);
     }
 
     .nav {
       height: 70px;
+
       display: flex;
+
       align-items: center;
+
       justify-content: space-between;
     }
 
     .brand {
       width: 38px;
       height: 38px;
+
       display: grid;
+
       place-items: center;
+
       border: 1px solid #ccd3dd;
+
       border-radius: 8px;
+
       font-weight: 800;
+
       letter-spacing: -.04em;
     }
 
     .nav-links {
       display: flex;
+
       gap: 28px;
+
       font-size: 14px;
+
       color: #4b5563;
     }
 
@@ -88,15 +117,20 @@
       color: var(--accent);
     }
 
-    /* HERO */
+
+    /* =========================
+       HERO
+       ========================= */
 
     .hero {
       padding: 90px 0 70px;
+
       background: linear-gradient(
         180deg,
         #ffffff 0%,
         #f8fafc 100%
       );
+
       border-bottom: 1px solid var(--line);
     }
 
@@ -104,17 +138,29 @@
     .section-label,
     .project-type {
       margin: 0;
+
       font-size: 12px;
+
       font-weight: 800;
+
       letter-spacing: .14em;
+
       color: var(--accent);
     }
 
     .hero h1 {
       max-width: 850px;
+
       margin: 18px 0 22px;
-      font-size: clamp(42px, 6vw, 72px);
+
+      font-size: clamp(
+        42px,
+        6vw,
+        72px
+      );
+
       line-height: 1.05;
+
       letter-spacing: -.045em;
     }
 
@@ -123,77 +169,108 @@
     }
 
     .hero-text {
-      max-width: 760px;
+      max-width: 780px;
+
       margin: 0;
+
       color: var(--muted);
+
       font-size: 18px;
     }
 
     .back-link {
       display: inline-flex;
+
       margin-top: 32px;
+
       color: var(--accent);
+
       font-size: 14px;
+
       font-weight: 750;
     }
 
-    /* SECTIONS */
+
+    /* =========================
+       SECTIONS
+       ========================= */
 
     .section {
       padding: 80px 0;
     }
 
     .section-heading {
-      max-width: 760px;
+      max-width: 800px;
+
       margin-bottom: 35px;
     }
 
     .section-heading h2 {
-      margin: 8px 0 8px;
+      margin: 8px 0;
+
       font-size: 38px;
+
       line-height: 1.15;
+
       letter-spacing: -.03em;
     }
 
     .section-heading p {
       margin: 0;
+
       color: var(--muted);
     }
 
-    /* OVERVIEW */
+
+    /* =========================
+       OVERVIEW
+       ========================= */
 
     .overview {
       display: grid;
-      grid-template-columns: 1.25fr .75fr;
+
+      grid-template-columns:
+        1.25fr .75fr;
+
       gap: 28px;
     }
 
     .overview-card {
       padding: 30px;
+
       border: 1px solid var(--line);
+
       border-radius: 12px;
+
       background: #fff;
     }
 
     .overview-card h3 {
       margin: 0 0 12px;
+
       font-size: 20px;
     }
 
     .overview-card p {
       margin: 0;
+
       color: var(--muted);
     }
 
     .scope-list {
       margin: 0;
+
       padding: 0;
+
       list-style: none;
     }
 
     .scope-list li {
       padding: 12px 0;
-      border-bottom: 1px solid var(--line);
+
+      border-bottom:
+        1px solid var(--line);
+
       font-weight: 650;
     }
 
@@ -201,158 +278,261 @@
       border-bottom: 0;
     }
 
-    /* DELIVERABLES */
+
+    /* =========================
+       DELIVERABLES
+       ========================= */
 
     .deliverables {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
       gap: 18px;
     }
 
     .deliverable {
       padding: 25px;
+
       border: 1px solid var(--line);
+
       border-radius: 12px;
+
       background: #fff;
-      transition: transform .2s ease, box-shadow .2s ease;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
     .deliverable:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(23,32,51,.08);
+
+      box-shadow:
+        0 12px 30px
+        rgba(23,32,51,.08);
     }
 
     .deliverable-icon {
       font-size: 25px;
+
       margin-bottom: 15px;
     }
 
     .deliverable h3 {
       margin: 0 0 7px;
+
       font-size: 18px;
     }
 
     .deliverable p {
       margin: 0 0 18px;
+
       color: var(--muted);
+
       font-size: 14px;
     }
 
     .deliverable-link {
       color: var(--accent);
+
       font-size: 14px;
+
       font-weight: 800;
     }
 
-    /* BPMN */
+
+    /* =========================
+       BPMN
+       ========================= */
+
+    .bpmn-grid {
+      display: grid;
+
+      grid-template-columns:
+        repeat(3, 1fr);
+
+      gap: 20px;
+    }
 
     .bpmn-card {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 25px;
-      padding: 28px;
-      border: 1px solid #d7e3f1;
+      overflow: hidden;
+
+      border: 1px solid var(--line);
+
       border-radius: 12px;
-      background: var(--accent-light);
+
+      background: #fff;
+
+      transition:
+        transform .2s ease,
+        box-shadow .2s ease;
     }
 
-    .bpmn-card h3 {
-      margin: 0 0 5px;
+    .bpmn-card:hover {
+      transform: translateY(-3px);
+
+      box-shadow:
+        0 12px 30px
+        rgba(23,32,51,.08);
     }
 
-    .bpmn-card p {
-      margin: 0;
+    .bpmn-card a {
+      display: block;
+    }
+
+    .bpmn-card img {
+      display: block;
+
+      width: 100%;
+
+      height: 250px;
+
+      object-fit: contain;
+
+      background: #fff;
+    }
+
+    .bpmn-caption {
+      padding: 16px;
+
+      border-top:
+        1px solid var(--line);
+    }
+
+    .bpmn-caption strong {
+      display: block;
+
+      margin-bottom: 3px;
+    }
+
+    .bpmn-caption span {
       color: var(--muted);
+
+      font-size: 13px;
     }
 
-    .button {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 11px 18px;
-      border-radius: 7px;
-      font-size: 14px;
-      font-weight: 750;
-      border: 1px solid var(--accent);
-      white-space: nowrap;
-    }
 
-    .button.primary {
-      color: white;
-      background: var(--accent);
-    }
-
-    .button.secondary {
-      color: var(--accent);
-      background: white;
-    }
-
-    /* EVIDENCE */
+    /* =========================
+       EVIDENCE
+       ========================= */
 
     .evidence-grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+
+      grid-template-columns:
+        repeat(2, 1fr);
+
       gap: 22px;
     }
 
     .evidence-item {
       overflow: hidden;
+
       border: 1px solid var(--line);
+
       border-radius: 10px;
+
       background: #fff;
+    }
+
+    .evidence-item a {
+      display: block;
     }
 
     .evidence-item img {
       display: block;
+
       width: 100%;
+
       height: auto;
+
+      transition:
+        transform .25s ease;
+    }
+
+    .evidence-item img:hover {
+      transform: scale(1.015);
     }
 
     .evidence-caption {
       padding: 14px 16px;
+
       font-size: 13px;
+
       font-weight: 700;
+
       color: var(--muted);
-      border-top: 1px solid var(--line);
+
+      border-top:
+        1px solid var(--line);
     }
 
-    /* TAKEAWAYS */
+
+    /* =========================
+       TAKEAWAYS
+       ========================= */
 
     .takeaways {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+
+      grid-template-columns:
+        repeat(4, 1fr);
+
       gap: 18px;
     }
 
     .takeaway {
       padding: 25px;
-      border-top: 3px solid var(--accent);
+
+      border-top:
+        3px solid var(--accent);
+
       background: var(--soft);
     }
 
     .takeaway strong {
       display: block;
+
       margin-bottom: 8px;
     }
 
     .takeaway span {
       color: var(--muted);
+
       font-size: 14px;
     }
 
-    /* FOOTER */
+
+    /* =========================
+       FOOTER
+       ========================= */
 
     footer {
       padding: 30px 0;
-      border-top: 1px solid var(--line);
+
+      border-top:
+        1px solid var(--line);
+
       color: var(--muted);
+
       font-size: 13px;
     }
 
-    @media (max-width: 800px) {
+
+    /* =========================
+       MOBILE
+       ========================= */
+
+    @media (max-width: 850px) {
+
       .container {
-        width: min(var(--max), calc(100% - 30px));
+        width:
+          min(
+            var(--max),
+            calc(100% - 30px)
+          );
       }
 
       .nav-links {
@@ -361,577 +541,978 @@
 
       .overview,
       .deliverables,
+      .bpmn-grid,
       .evidence-grid,
       .takeaways {
         grid-template-columns: 1fr;
       }
 
-      .bpmn-card {
-        align-items: flex-start;
-        flex-direction: column;
+      .hero {
+        padding:
+          65px 0 55px;
       }
 
-      .hero {
-        padding: 65px 0 55px;
-      }
     }
+
   </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================
+     NAVIGATION
+     ========================= -->
+
 <header class="site-header">
+
   <div class="container nav">
 
-    <a class="brand" href="index.html">AR</a>
+    <a
+      class="brand"
+      href="index.html">
+      AR
+    </a>
 
     <nav class="nav-links">
-      <a href="#overview">Overview</a>
-      <a href="#deliverables">Deliverables</a>
-      <a href="#evidence">Evidence</a>
-      <a href="index.html">Portfolio</a>
+
+      <a href="#overview">
+        Overview
+      </a>
+
+      <a href="#deliverables">
+        Deliverables
+      </a>
+
+      <a href="#bpmn">
+        BPMN
+      </a>
+
+      <a href="#evidence">
+        Evidence
+      </a>
+
+      <a href="index.html">
+        Portfolio
+      </a>
+
     </nav>
 
   </div>
+
 </header>
+
 
 
 <main>
 
-  <!-- HERO -->
 
-  <section class="hero">
+<!-- =========================
+     HERO
+     ========================= -->
 
-    <div class="container">
+<section class="hero">
 
-      <p class="eyebrow">
-        ERP · BUSINESS PROCESS · ODOO
+  <div class="container">
+
+    <p class="eyebrow">
+      ERP · BUSINESS PROCESS · ODOO
+    </p>
+
+    <h1>
+
+      CampusKart —
+
+      <span>
+        ERP Consulting & Implementation.
+      </span>
+
+    </h1>
+
+    <p class="hero-text">
+
+      An end-to-end ERP consulting and implementation
+      project involving business process analysis,
+      BPMN modelling, process re-engineering and Odoo
+      implementation across sales, inventory, procurement
+      and accounting workflows.
+
+    </p>
+
+    <a
+      href="index.html#projects"
+      class="back-link">
+
+      ← Back to Portfolio
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     OVERVIEW
+     ========================= -->
+
+<section
+  id="overview"
+  class="section">
+
+  <div class="container">
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        PROJECT OVERVIEW
       </p>
 
-      <h1>
-        CampusKart —
-        <span>ERP Consulting & Implementation.</span>
-      </h1>
+      <h2>
+        From business process analysis
+        to ERP implementation.
+      </h2>
 
-      <p class="hero-text">
-        An end-to-end ERP consulting and implementation project involving
-        business process analysis, BPMN modelling, process re-engineering
-        and Odoo implementation across sales, inventory, procurement
-        and accounting workflows.
+      <p>
+
+        The project focused on understanding
+        business workflows, modelling processes,
+        identifying improvement opportunities and
+        implementing the resulting workflows in Odoo.
+
       </p>
 
-      <a href="index.html#projects" class="back-link">
-        ← Back to Portfolio
-      </a>
-
     </div>
 
-  </section>
+
+    <div class="overview">
 
 
-  <!-- OVERVIEW -->
+      <div class="overview-card">
 
-  <section id="overview" class="section">
-
-    <div class="container">
-
-      <div class="section-heading">
-
-        <p class="section-label">PROJECT OVERVIEW</p>
-
-        <h2>From business process analysis to ERP implementation.</h2>
+        <h3>
+          Consulting Approach
+        </h3>
 
         <p>
-          The project focused on understanding business workflows,
-          modelling processes, identifying improvement opportunities
-          and implementing the resulting workflows in Odoo.
+
+          The project combines business process
+          analysis, BPMN modelling, process
+          re-engineering and ERP implementation
+          to translate business requirements into
+          an integrated operating workflow.
+
         </p>
 
       </div>
 
 
-      <div class="overview">
+      <div class="overview-card">
 
-        <div class="overview-card">
+        <h3>
+          Project Scope
+        </h3>
 
-          <h3>Consulting Approach</h3>
+        <ul class="scope-list">
 
-          <p>
-            The project combines business process analysis,
-            BPMN modelling, process re-engineering and ERP
-            implementation to translate business requirements
-            into an integrated operating workflow.
-          </p>
+          <li>
+            01 · Business Process Analysis
+          </li>
 
-        </div>
+          <li>
+            02 · BPMN & Process Re-engineering
+          </li>
 
+          <li>
+            03 · Odoo ERP Implementation
+          </li>
 
-        <div class="overview-card">
+          <li>
+            04 · End-to-End Transaction Validation
+          </li>
 
-          <h3>Project Scope</h3>
-
-          <ul class="scope-list">
-
-            <li>01 · Business Process Analysis</li>
-
-            <li>02 · BPMN & Process Re-engineering</li>
-
-            <li>03 · Odoo ERP Implementation</li>
-
-            <li>04 · End-to-End Transaction Validation</li>
-
-          </ul>
-
-        </div>
+        </ul>
 
       </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- DELIVERABLES -->
 
-  <section id="deliverables" class="section" style="background:#f7f8fa;">
+<!-- =========================
+     DELIVERABLES
+     ========================= -->
 
-    <div class="container">
+<section
+  id="deliverables"
+  class="section"
+  style="background:#f7f8fa;">
 
-      <div class="section-heading">
+  <div class="container">
 
-        <p class="section-label">PROJECT DELIVERABLES</p>
+    <div class="section-heading">
 
-        <h2>Supporting work & documentation.</h2>
+      <p class="section-label">
+        PROJECT DELIVERABLES
+      </p>
 
-        <p>
-          The underlying project documentation provides additional
-          detail beyond the implementation screenshots.
-        </p>
+      <h2>
+        Supporting work & documentation.
+      </h2>
 
-      </div>
+      <p>
 
+        The underlying project documentation
+        provides additional detail beyond the
+        implementation evidence.
 
-      <div class="deliverables">
-
-        <!-- REPORT -->
-
-        <article class="deliverable">
-
-          <div class="deliverable-icon">📄</div>
-
-          <h3>Project Report</h3>
-
-          <p>
-            Detailed documentation of the CampusKart ERP project,
-            including the analysis, implementation and project work.
-          </p>
-
-          <a
-            class="deliverable-link"
-            href="assets/campuskart/CampusKart_Project_Report.pdf"
-            target="_blank">
-            View Project Report →
-          </a>
-
-        </article>
-
-
-        <!-- PRESENTATION -->
-
-        <article class="deliverable">
-
-          <div class="deliverable-icon">📊</div>
-
-          <h3>Project Presentation</h3>
-
-          <p>
-            Presentation documenting the project approach,
-            implementation and key project outcomes.
-          </p>
-
-          <a
-            class="deliverable-link"
-            href="assets/campuskart/CampusKart_Project_Presentation.pptx"
-            target="_blank">
-            Open Presentation →
-          </a>
-
-        </article>
-
-
-        <!-- BPMN -->
-
-        <article class="deliverable">
-
-          <div class="deliverable-icon">🔄</div>
-
-          <h3>BPMN Models</h3>
-
-          <p>
-            Process models supporting business process analysis,
-            re-engineering and ERP workflow design.
-          </p>
-
-          <a
-            class="deliverable-link"
-            href="https://github.com/agnitra-ray/agnitra-ray.github.io/tree/main/assets/campuskart"
-            target="_blank">
-            View BPMN Models →
-          </a>
-
-        </article>
-
-      </div>
+      </p>
 
     </div>
 
-  </section>
+
+    <div class="deliverables">
 
 
-  <!-- BPMN / PROCESS -->
+      <!-- REPORT -->
 
-  <section class="section">
+      <article class="deliverable">
 
-    <div class="container">
+        <div class="deliverable-icon">
+          📄
+        </div>
 
-      <div class="section-heading">
-
-        <p class="section-label">PROCESS DESIGN</p>
-
-        <h2>Business process modelling.</h2>
+        <h3>
+          Project Report
+        </h3>
 
         <p>
-          BPMN modelling was used to represent and analyse the
-          business workflows before translating them into ERP processes.
+
+          Detailed documentation of the
+          CampusKart ERP project, including
+          the analysis, implementation and
+          project work.
+
         </p>
-
-      </div>
-
-
-      <div class="bpmn-card">
-
-        <div>
-
-          <h3>BPMN Process Models</h3>
-
-          <p>
-            Explore the process models and supporting project files
-            maintained with the CampusKart implementation evidence.
-          </p>
-
-        </div>
 
         <a
-          class="button secondary"
-          href="https://github.com/agnitra-ray/agnitra-ray.github.io/tree/main/assets/campuskart"
+          class="deliverable-link"
+          href="assets/campuskart/CampusKart_Project_Report.pdf"
           target="_blank">
-          Open Models →
+
+          View Project Report →
+
         </a>
 
-      </div>
+      </article>
+
+
+
+      <!-- PRESENTATION -->
+
+      <article class="deliverable">
+
+        <div class="deliverable-icon">
+          📊
+        </div>
+
+        <h3>
+          Project Presentation
+        </h3>
+
+        <p>
+
+          Presentation documenting the
+          project approach, implementation
+          and key project outcomes.
+
+        </p>
+
+        <a
+          class="deliverable-link"
+          href="assets/campuskart/CampusKart_Project_Presentation.pptx"
+          target="_blank">
+
+          Open Presentation →
+
+        </a>
+
+      </article>
+
+
+
+      <!-- BPMN -->
+
+      <article class="deliverable">
+
+        <div class="deliverable-icon">
+          🔄
+        </div>
+
+        <h3>
+          BPMN Models
+        </h3>
+
+        <p>
+
+          AS-IS and TO-BE process models
+          supporting process analysis and
+          ERP workflow design.
+
+        </p>
+
+        <a
+          class="deliverable-link"
+          href="#bpmn">
+
+          View BPMN Models →
+
+        </a>
+
+      </article>
+
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- IMPLEMENTATION EVIDENCE -->
 
-  <section id="evidence" class="section" style="background:#f7f8fa;">
+<!-- =========================
+     BPMN MODELS
+     ========================= -->
 
-    <div class="container">
+<section
+  id="bpmn"
+  class="section">
 
-      <div class="section-heading">
-
-        <p class="section-label">ODOO IMPLEMENTATION EVIDENCE</p>
-
-        <h2>End-to-end workflow evidence.</h2>
-
-        <p>
-          Screenshots from the configured Odoo environment demonstrate
-          the implemented website, product, inventory, sales, purchasing,
-          delivery and accounting workflows.
-        </p>
-
-      </div>
+  <div class="container">
 
 
-      <div class="evidence-grid">
+    <div class="section-heading">
+
+      <p class="section-label">
+        PROCESS DESIGN
+      </p>
+
+      <h2>
+        Business process modelling.
+      </h2>
+
+      <p>
+
+        AS-IS and TO-BE process models were
+        developed to analyse and redesign
+        key business workflows.
+
+        <br><br>
+
+        <strong>
+          Click any model to open it in full size.
+        </strong>
+
+      </p>
+
+    </div>
 
 
-        <article class="evidence-item">
+
+    <div class="bpmn-grid">
+
+
+      <!-- M2O -->
+
+      <article class="bpmn-card">
+
+        <a
+          href="assets/campuskart/M2O_AS_IS_TO_BE.png"
+          target="_blank">
+
+          <img
+            src="assets/campuskart/M2O_AS_IS_TO_BE.png"
+            alt="M2O AS-IS TO-BE BPMN model">
+
+        </a>
+
+        <div class="bpmn-caption">
+
+          <strong>
+            M2O
+          </strong>
+
+          <span>
+            AS-IS → TO-BE Process Model
+          </span>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- O2C -->
+
+      <article class="bpmn-card">
+
+        <a
+          href="assets/campuskart/O2C_AS_IS_TO_BE.png"
+          target="_blank">
+
+          <img
+            src="assets/campuskart/O2C_AS_IS_TO_BE.png"
+            alt="O2C AS-IS TO-BE BPMN model">
+
+        </a>
+
+        <div class="bpmn-caption">
+
+          <strong>
+            O2C
+          </strong>
+
+          <span>
+            AS-IS → TO-BE Process Model
+          </span>
+
+        </div>
+
+      </article>
+
+
+
+      <!-- P2P -->
+
+      <article class="bpmn-card">
+
+        <a
+          href="assets/campuskart/P2P_AS_IS_TO_BE.png"
+          target="_blank">
+
+          <img
+            src="assets/campuskart/P2P_AS_IS_TO_BE.png"
+            alt="P2P AS-IS TO-BE BPMN model">
+
+        </a>
+
+        <div class="bpmn-caption">
+
+          <strong>
+            P2P
+          </strong>
+
+          <span>
+            AS-IS → TO-BE Process Model
+          </span>
+
+        </div>
+
+      </article>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+
+<!-- =========================
+     ODOO EVIDENCE
+     ========================= -->
+
+<section
+  id="evidence"
+  class="section"
+  style="background:#f7f8fa;">
+
+  <div class="container">
+
+
+    <div class="section-heading">
+
+      <p class="section-label">
+        ODOO IMPLEMENTATION EVIDENCE
+      </p>
+
+      <h2>
+        End-to-end workflow evidence.
+      </h2>
+
+      <p>
+
+        Screenshots from the configured Odoo
+        environment demonstrate the implemented
+        website, product, inventory, sales,
+        purchasing, delivery and accounting workflows.
+
+        <br><br>
+
+        <strong>
+          Click any screenshot to open it in full size.
+        </strong>
+
+      </p>
+
+    </div>
+
+
+
+    <div class="evidence-grid">
+
+
+      <!-- 01 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/01_Website_Homepage.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/01_Website_Homepage.png"
             alt="CampusKart Odoo website homepage">
 
-          <div class="evidence-caption">
-            01 · Website Homepage
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          01 · Website Homepage
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 02 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/02_Website_Product_Catalog.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/02_Website_Product_Catalog.png"
             alt="CampusKart product catalog">
 
-          <div class="evidence-caption">
-            02 · Website Product Catalog
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          02 · Website Product Catalog
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 03 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/03_Inventory_Product_List.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/03_Inventory_Product_List.png"
             alt="CampusKart inventory product list">
 
-          <div class="evidence-caption">
-            03 · Inventory Product List
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          03 · Inventory Product List
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 04 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/04_Sales_Order_S00007.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/04_Sales_Order_S00007.png"
             alt="CampusKart sales order">
 
-          <div class="evidence-caption">
-            04 · Sales Order S00007
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          04 · Sales Order S00007
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 05 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/05_Delivery_Order_Stock_Unavailable.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/05_Delivery_Order_Stock_Unavailable.png"
             alt="CampusKart delivery order stock unavailable">
 
-          <div class="evidence-caption">
-            05 · Delivery Order — Stock Unavailable
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          05 · Delivery Order — Stock Unavailable
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 06 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/06_Delivery_Order_Ready.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/06_Delivery_Order_Ready.png"
             alt="CampusKart delivery order ready">
 
-          <div class="evidence-caption">
-            06 · Delivery Order — Ready
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          06 · Delivery Order — Ready
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 07 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/07_Purchase_Order_P00007.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/07_Purchase_Order_P00007.png"
             alt="CampusKart purchase order">
 
-          <div class="evidence-caption">
-            07 · Purchase Order P00007
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          07 · Purchase Order P00007
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 08 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/08_Customer_Invoice_Posted.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/08_Customer_Invoice_Posted.png"
             alt="CampusKart customer invoice posted">
 
-          <div class="evidence-caption">
-            08 · Customer Invoice — Posted
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          08 · Customer Invoice — Posted
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 09 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/09_Customer_Invoice_In_Payment.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/09_Customer_Invoice_In_Payment.png"
             alt="CampusKart customer invoice in payment">
 
-          <div class="evidence-caption">
-            09 · Customer Invoice — In Payment
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          09 · Customer Invoice — In Payment
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 10 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/10_Vendor_Bill_In_Payment.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/10_Vendor_Bill_In_Payment.png"
             alt="CampusKart vendor bill in payment">
 
-          <div class="evidence-caption">
-            10 · Vendor Bill — In Payment
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          10 · Vendor Bill — In Payment
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 11 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/11_Journal_Entries.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/11_Journal_Entries.png"
             alt="CampusKart journal entries">
 
-          <div class="evidence-caption">
-            11 · Journal Entries
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          11 · Journal Entries
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 12 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/12_Analytic_Reporting.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/12_Analytic_Reporting.png"
             alt="CampusKart analytic reporting">
 
-          <div class="evidence-caption">
-            12 · Analytic Reporting
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          12 · Analytic Reporting
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 13 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/13_Profit_and_Loss.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/13_Profit_and_Loss.png"
             alt="CampusKart profit and loss report">
 
-          <div class="evidence-caption">
-            13 · Profit & Loss
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          13 · Profit & Loss
+        </div>
+
+      </article>
 
 
-        <article class="evidence-item">
+
+      <!-- 14 -->
+
+      <article class="evidence-item">
+
+        <a
+          href="assets/campuskart/14_Vendor_Bills_List.png"
+          target="_blank">
 
           <img
             src="assets/campuskart/14_Vendor_Bills_List.png"
             alt="CampusKart vendor bills list">
 
-          <div class="evidence-caption">
-            14 · Vendor Bills List
-          </div>
+        </a>
 
-        </article>
+        <div class="evidence-caption">
+          14 · Vendor Bills List
+        </div>
 
+      </article>
 
-      </div>
 
     </div>
 
-  </section>
+  </div>
+
+</section>
 
 
-  <!-- TAKEAWAYS -->
 
-  <section class="section">
+<!-- =========================
+     TAKEAWAYS
+     ========================= -->
 
-    <div class="container">
+<section class="section">
 
-      <div class="section-heading">
-
-        <p class="section-label">WHAT THIS PROJECT DEMONSTRATES</p>
-
-        <h2>Consulting skills backed by implementation evidence.</h2>
-
-      </div>
+  <div class="container">
 
 
-      <div class="takeaways">
+    <div class="section-heading">
 
-        <div class="takeaway">
+      <p class="section-label">
+        WHAT THIS PROJECT DEMONSTRATES
+      </p>
 
-          <strong>Business Analysis</strong>
-
-          <span>
-            Understanding business processes and translating
-            requirements into structured workflows.
-          </span>
-
-        </div>
-
-
-        <div class="takeaway">
-
-          <strong>Process Modelling</strong>
-
-          <span>
-            Using BPMN to represent and analyse business processes
-            and support process re-engineering.
-          </span>
-
-        </div>
-
-
-        <div class="takeaway">
-
-          <strong>ERP Implementation</strong>
-
-          <span>
-            Configuring and validating integrated workflows
-            within an Odoo ERP environment.
-          </span>
-
-        </div>
-
-
-        <div class="takeaway">
-
-          <strong>Financial Integration</strong>
-
-          <span>
-            Connecting operational transactions with invoicing,
-            vendor bills, journal entries and reporting.
-          </span>
-
-        </div>
-
-      </div>
+      <h2>
+        Consulting skills backed by
+        implementation evidence.
+      </h2>
 
     </div>
 
-  </section>
+
+
+    <div class="takeaways">
+
+
+      <div class="takeaway">
+
+        <strong>
+          Business Analysis
+        </strong>
+
+        <span>
+
+          Understanding business processes
+          and translating requirements into
+          structured workflows.
+
+        </span>
+
+      </div>
+
+
+
+      <div class="takeaway">
+
+        <strong>
+          Process Modelling
+        </strong>
+
+        <span>
+
+          Using BPMN to represent and analyse
+          business processes and support
+          process re-engineering.
+
+        </span>
+
+      </div>
+
+
+
+      <div class="takeaway">
+
+        <strong>
+          ERP Implementation
+        </strong>
+
+        <span>
+
+          Configuring and validating integrated
+          workflows within an Odoo ERP environment.
+
+        </span>
+
+      </div>
+
+
+
+      <div class="takeaway">
+
+        <strong>
+          Financial Integration
+        </strong>
+
+        <span>
+
+          Connecting operational transactions
+          with invoicing, vendor bills, journal
+          entries and reporting.
+
+        </span>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
 
 </main>
 
+
+
+<!-- =========================
+     FOOTER
+     ========================= -->
 
 <footer>
 
   <div class="container">
 
     <p>
-      © 2026 Agnitra Ray · CampusKart ERP Consulting & Implementation
+
+      © 2026 Agnitra Ray ·
+      CampusKart ERP Consulting & Implementation
+
     </p>
 
   </div>
 
 </footer>
 
+
 </body>
+
 </html>
