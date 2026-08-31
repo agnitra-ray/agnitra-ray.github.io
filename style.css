@@ -538,3 +538,56 @@ section {
     flex-direction: column;
   }
 }
+
+/* CAMPUSKART PROJECT EVIDENCE */
+
+.project-evidence-link {
+  margin-top: 28px;
+}
+
+.evidence-folder {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 20px 22px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--soft);
+  transition: transform .2s, box-shadow .2s, border-color .2s;
+}
+
+.evidence-folder:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(23, 32, 51, .08);
+  border-color: var(--accent);
+}
+
+.folder-icon {
+  width: 46px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 7px;
+  background: var(--accent);
+  color: #fff;
+  font-size: 18px;
+}
+
+.evidence-folder strong {
+  display: block;
+  font-size: 16px;
+  color: var(--ink);
+}
+
+.evidence-folder span {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.evidence-arrow {
+  margin-left: auto;
+  font-size: 22px;
+  color: var(--accent);
+}
